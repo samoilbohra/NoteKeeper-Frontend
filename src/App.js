@@ -23,14 +23,13 @@ export default function App() {
 
   return (
     <NoteState>
-    <HashRouter>
     <div>
       <Navbar/>
      <Alert alert={alert} />
      
       <div className='container'>
       <Routes>
-   <Route path="/" element={<Home showAlert={showAlert}/>}/>
+   <Route exact path="/" element={<Home showAlert={showAlert}/>}/>
    <Route path="/about" element={<About/>}/>
    <Route path="/login" element={<Login showAlert={showAlert} />}/>
    <Route path="/signup" element={<SignUp showAlert={showAlert} />}/>
@@ -40,7 +39,6 @@ export default function App() {
       </div>
     </div>
     
-   </HashRouter>
     </NoteState>
   )
 }
