@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./index.css"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, HashRouter } from "react-router-dom";
 import About from './components/About';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
@@ -23,7 +23,7 @@ export default function App() {
 
   return (
     <NoteState>
-    <Router>
+    <HashRouter>
     <div>
       <Navbar/>
      <Alert alert={alert} />
@@ -39,7 +39,8 @@ export default function App() {
       </Routes>
       </div>
     </div>
-    </Router>
+    
+   </HashRouter>
     </NoteState>
   )
 }
